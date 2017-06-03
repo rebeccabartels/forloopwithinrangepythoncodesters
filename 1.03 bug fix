@@ -1,0 +1,18 @@
+computer = codesters.Sprite("fish2")
+stage.set_background("underwater")
+
+rand_num = random.randint(1,10)
+my_display = codesters.Display(rand_num)
+
+for counter in range(3):
+    guess = int(computer.ask("How old do you think I am?"))
+    if guess == rand_num:
+        computer.say("Great job, you guessed my age!")
+    if guess > rand_num:
+        computer.say("Too high!")
+        stage.wait(2)
+    if guess < rand_num:
+        computer.say("Too low!")    
+    break
+   
+   #fish will output your input of a number between 1-10 with these conditionals. 
